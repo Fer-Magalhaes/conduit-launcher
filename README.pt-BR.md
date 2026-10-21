@@ -39,7 +39,9 @@
 4. Aperte **JOGAR**.
 
 Versões aceitas: europeia **CUSA00004** (recomendada, tem todos os idiomas), americana CUSA00223 e
-asiática CUSA00064. O jogo precisa estar extraído (pasta com `eboot.bin`), não em `.pkg`.
+asiática CUSA00064. O jogo precisa estar extraído (pasta com `eboot.bin`), não em `.pkg`. O launcher não
+instala `.pkg` de PS4: o conteúdo deles é criptografado com chaves da Sony, que este projeto não traz nem usa
+(o próprio shadPS4 removeu o instalador de PKG).
 
 ## Tutorial
 

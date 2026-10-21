@@ -40,7 +40,9 @@
 4. Press **PLAY**.
 
 Supported: European **CUSA00004** (recommended, all languages), US CUSA00223 and Asian CUSA00064. The game
-must be extracted (a folder with `eboot.bin`), not a `.pkg`.
+must be extracted (a folder with `eboot.bin`), not a `.pkg`. The launcher does not install PS4 `.pkg` files:
+their contents are encrypted with Sony's keys, which this project does not ship or use (shadPS4 dropped its
+PKG installer too).
 
 ## Guide
 

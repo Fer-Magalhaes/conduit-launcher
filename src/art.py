@@ -7,6 +7,15 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 import core
 
+
+def path(kind):
+    """The user's own art\\<kind>.png (or .jpg), or None when there isn't one."""
+    for ext in ('.png', '.jpg', '.jpeg'):
+        p = os.path.join(core.ART, kind + ext)
+        if os.path.isfile(p):
+            return p
+    return None
+
 # ---------------------------------------------------------------- drawn fallback
 
 def background(w, h):
