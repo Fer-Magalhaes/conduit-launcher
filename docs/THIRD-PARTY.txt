@@ -1,0 +1,19 @@
+Third-party software inside this build of Conduit Launcher
+==========================================================
+
+The launcher is a Python program packaged with PyInstaller. The packaged folder (_internal) contains:
+
+- Python 3 runtime - Python Software Foundation License Version 2
+  https://docs.python.org/3/license.html
+- Tcl/Tk (used by Tkinter) - BSD-style Tcl/Tk license
+  https://www.tcl.tk/software/tcltk/license.html
+- Pillow - MIT-CMU (HPND) license
+  https://github.com/python-pillow/Pillow/blob/main/LICENSE
+- PyInstaller bootloader - GPL-2.0 with a special exception that allows using it in programs under
+  any license
+  https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt
+
+Not included (downloaded by the user, from their own sources, only when asked):
+- shadPS4 and its "Infamous" build - GPL-2.0 - source: https://github.com/rayhlancaner-png/shadPS4-Infamous-FixBuild
+- GoldHEN cheat files - GPL-3.0 - https://github.com/GoldHEN/GoldHEN_Cheat_Repository
+- shadPS4 game patches - https://github.com/shadps4-emu/ps4_cheats

@@ -1,0 +1,35 @@
+Conduit Launcher - launcher NAO OFICIAL para inFAMOUS Second Son (PS4) no PC
+=============================================================================
+
+Projeto de fa, nao oficial. Nao e afiliado a Sony Interactive Entertainment, a Sucker Punch Productions
+nem a equipe do shadPS4. Nenhum arquivo do jogo vem com o launcher: use a sua propria copia.
+
+Comecar
+-------
+1. Abra "Conduit Launcher.exe".
+2. Clique no quadro "Jogo" para baixar o emulador (ou rode baixar-emulador.bat).
+3. Clique de novo e escolha a pasta do jogo (a que tem eboot.bin, ex.: CUSA00004).
+4. JOGAR.
+
+Mods: arraste o .zip para a pasta "mods" daqui. Ele e instalado quando o launcher abrir ou ao jogar;
+tirou o .zip, o mod sai.
+
+Portugues do Brasil: "Idioma e dublagem" > "Importar portugues do Brasil..." e escolha a sua copia
+americana (CUSA00223) ou um port pronto.
+
+Guia completo, controles e problemas comuns: README no repositorio do projeto.
+Creditos: CREDITS.md. Licenca do launcher: LICENSE.txt (MIT). Componentes: THIRD-PARTY.txt.
+
+
+Conduit Launcher - UNOFFICIAL launcher for inFAMOUS Second Son (PS4) on PC
+==========================================================================
+
+Unofficial fan project, not affiliated with Sony Interactive Entertainment, Sucker Punch Productions or
+the shadPS4 team. No game files are included: use your own copy.
+
+1. Open "Conduit Launcher.exe".
+2. Click the "Game" tile to download the emulator (or run baixar-emulador.bat).
+3. Click it again and choose the game folder (the one with eboot.bin, e.g. CUSA00004).
+4. PLAY.
+
+Mods: drop the .zip in the "mods" folder here.

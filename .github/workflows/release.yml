@@ -1,0 +1,57 @@
+# Builds the launcher on Windows when a version tag (v1.0.0, ...) is pushed and attaches the zip to
+# that tag's GitHub release. The zip has the launcher only: no game files and no emulator.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install build tools
+        run: pip install -r requirements.txt
+
+      - name: Check translations
+        run: python tools/i18n_check.py
+
+      - name: Build
+        shell: cmd
+        run: call build.bat
+
+      - name: Zip
+        shell: pwsh
+        run: |
+          $name = "Conduit-Launcher-$env:GITHUB_REF_NAME-windows.zip"
+          Compress-Archive -Path "dist/Conduit Launcher" -DestinationPath $name
+          "ZIP=$name" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP }}
+          body: |
+            Unofficial fan-made launcher for inFAMOUS Second Son on PC. **No game files are included.**
+            Launcher não oficial, feito por fãs. **Nenhum arquivo do jogo incluído.**
+
+            1. Extract the zip / Extraia o zip.
+            2. Open `Conduit Launcher.exe` and download the emulator from the "Game" tile / Abra e baixe o emulador pelo quadro "Jogo".
+            3. Choose your game folder (with `eboot.bin`) / Escolha a pasta do jogo.
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        with:
+          name: Conduit-Launcher
+          path: dist/Conduit Launcher
